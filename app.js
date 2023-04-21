@@ -3,6 +3,8 @@ const mongoose= require('mongoose');
 const router=require("./routes/phone-routes");
 const app= express();
 
+app.use(express.json());
+
 app.use('/Phones', router);
 
 mongoose
