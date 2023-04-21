@@ -1,6 +1,4 @@
-const Phone=require("../model/phone");
-
-
+const Phone=require("../model/Phone");
 
 const getAllPhones= async(req,res,next)=>{
     let phones;
@@ -9,6 +7,7 @@ const getAllPhones= async(req,res,next)=>{
       }catch(err){
         console.log(err);
       }
+
       if(!phones){
         return res.status(404).json({message:"No name found"});
       }
@@ -16,4 +15,4 @@ const getAllPhones= async(req,res,next)=>{
 }
 // const addPhone
 
-exports.getAllPhones=getAllPhones
+exports.getAllPhones=getAllPhones;
