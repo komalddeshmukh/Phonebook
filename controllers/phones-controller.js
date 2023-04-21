@@ -62,7 +62,7 @@ const getAllPhones= async(req,res,next)=>{
     if(!phone){
       return res.status(404).json({message:"Unable to update by Id"});
     }
-    return res.status(200).json({phone});
+    return res.status(200).json({message:"Contact Updated successfully"});
   };
 
   const deletePhone= async(req,res,next)=>{
@@ -76,7 +76,7 @@ const getAllPhones= async(req,res,next)=>{
     if(!phone){
       return res.status(404).json({message:"Unable to delete by Id"});
     }
-    return res.status(200).json({phone});
+    return res.status(200).json({message:"Contact Deleted successfully"});
   };
 
 
