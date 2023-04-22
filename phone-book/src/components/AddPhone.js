@@ -40,15 +40,15 @@ function AddPhone() {
    flexDirection="column" 
    justifyContent={'center'} 
    maxWidth={400} 
-   alignContent="center"
+   alignContent={"center"}
+   alignSelf={"center"}
    marginLeft={"auto"}
    marginRight={"auto"}
-   >
-
+   marginTop={10}>
    
     <FormLabel>Name</FormLabel>
     <TextField value={inputs.name}
-        onChange={handleChange}
+     onChange={handleChange}
         margin="normal" 
         fullWidth variant='outlined' 
         name="name"/>

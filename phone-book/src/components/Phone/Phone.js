@@ -16,8 +16,8 @@ function Phone(props) {
   return (
     <div className="card">
       <h3>{name}</h3>
-      <h4>{number1}</h4>
-      <h4>{number2}</h4>
+      <h3>{number1}</h3>
+      <h3>{number2}</h3>
       <Button LinkComponent={Link} to={`/phones/${_id}`} sx={{mt:"auto"}}>Update</Button>
       <Button onClick={deleteHandler} sx={{mt:"auto"}}>Delete</Button>
     </div>

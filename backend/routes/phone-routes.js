@@ -11,7 +11,8 @@ router.get("/:id",phonesController.getById);
 //add product by id of postman
 router.put("/:id",phonesController.updatePhone);
 //update by using id
-router.delete("/:id",phonesController.deletePhone);    
+router.delete("/:id",phonesController.deletePhone); 
+//serch by    
 
 
 module.exports=router

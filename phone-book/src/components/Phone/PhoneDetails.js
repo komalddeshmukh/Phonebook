@@ -9,7 +9,7 @@ import { useState } from 'react';
 function PhoneDetails(){
     const [inputs,setInputs]= useState({});
     const id=useParams().id;
-    const history=useNavigate
+    const history=useNavigate();
    
     useEffect(()=>{
      const fetchHandler=async()=>{
@@ -18,7 +18,7 @@ function PhoneDetails(){
         .then((res)=>res.data)
         .then(data=>setInputs(data.phone));
      };
-        fetchHandler();
+        fetchHandler()
     },[id]);
 
     const sendRequest = async()=>{
@@ -26,7 +26,7 @@ function PhoneDetails(){
             name: String(inputs.name),
             number1: Number(inputs.number1),
             number2: Number(inputs.number2)
-        }).then(res=>res.data);
+        }).then(res=>res.data)
     };
 
     
