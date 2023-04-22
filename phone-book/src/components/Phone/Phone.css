@@ -1,0 +1,27 @@
+ol{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+li{margin: auto;
+    padding: 1px;
+    height: 100%;
+    width: 100%;
+    width: 300px;
+    max-width: 250px;
+    max-height: 200px;
+
+}
+
+.card{
+    margin:auto;
+    padding: 3rem;
+    width: 200px;
+    height: 250px;
+    box-shadow: 5px 5px 10px #363030;
+    align-items: center;
+    text-align: center;
+
+}
