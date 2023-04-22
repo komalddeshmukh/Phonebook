@@ -21,7 +21,6 @@ function AddPhone() {
     };
 
     const sendRequest=async()=>{
-
     await axios.post("http://localhost:5000/phones",{
         name: String(inputs.name),
         number1: Number(inputs.number1),
@@ -55,12 +54,15 @@ function AddPhone() {
         name="name"/>
     <FormLabel>Number1</FormLabel>
     <TextField value={inputs.number1}
+        type="number"
         onChange={handleChange}
         margin="normal" 
-        fullWidth variant='outlined' 
+        fullWidth variant='outlined'
         name="number1"/>
     <FormLabel>Number2</FormLabel>
     <TextField value={inputs.number2}
+        type="number"
+        maxlength={10}
         onChange={handleChange}
         margin="normal"  
         fullWidth variant='outlined' 

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import  {useNavigate, useParams} from 'react-router-dom'
 import axios from 'axios';
-import { FormLabel, Button, Box, TextField,  } from '@mui/material';
+import { FormLabel, Button, Box, TextField } from '@mui/material';
 import { useState } from 'react';
 
 
@@ -63,18 +63,17 @@ return (
         name="name"/>
     <FormLabel>Number1</FormLabel>
     <TextField value={inputs.number1}
-    inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }}
         onChange={handleChange}
+        type="number"
         margin="normal" 
         fullWidth variant='outlined' 
-
+        
         name="number1"/>
     <FormLabel>Number2</FormLabel>
     <TextField value={inputs.number2}
-    inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }}
-    
+    type="number"
         onChange={handleChange}
-        margin="normal"
+        margin="normal"  
         fullWidth variant='outlined' 
         name="number2"/>
 
