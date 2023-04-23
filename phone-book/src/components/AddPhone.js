@@ -32,6 +32,7 @@ function AddPhone() {
         e.preventDefault();
         console.log(inputs);
         sendRequest().then(()=>history('/phones'))
+        alert("Added to contact");
     };
   return (
    <form onSubmit={handleSubmit}>

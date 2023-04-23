@@ -32,7 +32,8 @@ function PhoneDetails(){
     
  const handleSubmit= (e) => {
     e.preventDefault();
-    sendRequest().then(()=>history("/phones"))
+    sendRequest().then(()=>history("/phones"));
+    alert("Submitted");
  };
  const handleChange=(e) =>{
     setInputs((prevState)=>({

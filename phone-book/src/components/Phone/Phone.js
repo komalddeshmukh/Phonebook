@@ -14,6 +14,7 @@ function Phone(props) {
       await axios.delete(`http://localhost:5000/phones/${_id}`)
       .then(res=>res.data)
       .then(()=>history("/phones"))
+      
 
     };
   return (
