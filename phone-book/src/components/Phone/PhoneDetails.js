@@ -14,7 +14,7 @@ function PhoneDetails(){
     useEffect(()=>{
      const fetchHandler=async()=>{
         await axios
-        .get(`http://localhost:5000/phones/${id}`)
+        .get(`https://phone-book-erf4.onrender.com/phones/${id}`)
         .then((res)=>res.data)
         .then(data=>setInputs(data.phone));
      };
@@ -22,7 +22,7 @@ function PhoneDetails(){
     },[id]);
 
     const sendRequest = async()=>{
-        await axios.put(`http://localhost:5000/phones/${id}`,{
+        await axios.put(`https://phone-book-erf4.onrender.com/phones/${id}`,{
             name: String(inputs.name),
             number1: Number(inputs.number1),
             number2: Number(inputs.number2)

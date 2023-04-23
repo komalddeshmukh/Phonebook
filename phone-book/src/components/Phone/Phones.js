@@ -4,7 +4,7 @@ import Phone from './Phone';
 import "./Phone.css"
 
 
-const URL="http://localhost:5000/phones";
+const URL="https://phone-book-erf4.onrender.com/phones";
 
 const fetchHandler=async()=>{
     return await axios.get(URL).then((res)=>res.data)

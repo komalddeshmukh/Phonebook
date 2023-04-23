@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button } from '@mui/material';
 import "./Phone.css";
-import {Link, useNavigate, useParams} from 'react-router-dom';
+import {Link, useNavigate, } from 'react-router-dom';
 import axios from 'axios';
 
 

@@ -21,7 +21,7 @@ function AddPhone() {
     };
 
     const sendRequest=async()=>{
-    await axios.post("http://localhost:5000/phones",{
+    await axios.post("https://phone-book-erf4.onrender.com/phones",{
         name: String(inputs.name),
         number1: Number(inputs.number1),
         number2: Number(inputs.number2)
@@ -54,7 +54,9 @@ function AddPhone() {
         name="name"/>
     <FormLabel>Number1</FormLabel>
     <TextField value={inputs.number1}
-        type="number"
+        type="tel"
+        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+        required="true"
         onChange={handleChange}
         margin="normal" 
         fullWidth variant='outlined'
@@ -62,6 +64,8 @@ function AddPhone() {
     <FormLabel>Number2</FormLabel>
     <TextField value={inputs.number2}
         type="number"
+        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+        required="true"
         maxlength={10}
         onChange={handleChange}
         margin="normal"  

@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import Home from "./components/Home";
 import AddPhone from "./components/AddPhone";
 import Phones from "./components/Phone/Phones"
-import About from "./components/Phone/About";
+import Search from "./components/Phone/Search";
 import PhoneDetails from "./components/Phone/PhoneDetails"
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
         <Route path="/" element={<Home/>}exact/>
         <Route path="/add" element={<AddPhone/>}exact/>
         <Route path="/phones" element={<Phones/>}exact/>
-        <Route path="/about" element={<About/>}exact/>
+        <Route path="/search/" element={<Search/>}exact/>
         <Route path="/phones/:id" element={<PhoneDetails/>}exact/>
       </Routes>
     </main>
