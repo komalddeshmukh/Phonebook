@@ -6,14 +6,16 @@ import axios from 'axios';
 
 
 function Phone(props) {
-    const history= useNavigate()
-    const id=useParams().id;
+    const history= useNavigate();
+    // const id=useParams().id;
     const{_id,name,number1,number2}=props.phone;
-    const deleteHandler=()=>{
-      axios.delete(`http://localhost:5000/phones/${id}`)
+    const deleteHandler=async()=>{
+
+      await axios.delete(`http://localhost:5000/phones/${_id}`)
       .then(res=>res.data)
-      .then(()=>history("/phones"));
-    }
+      .then(()=>history("/phones"))
+
+    };
   return (
     <div className="card">
       <h3>{name}</h3>
