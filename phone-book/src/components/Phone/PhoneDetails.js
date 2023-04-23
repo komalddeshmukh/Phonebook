@@ -9,7 +9,7 @@ import { useState } from 'react';
 function PhoneDetails(){
     const [inputs,setInputs]= useState({});
     const id=useParams().id;
-    const history=useNavigate();
+    const history = useNavigate();
    
     useEffect(()=>{
      const fetchHandler=async()=>{
@@ -32,8 +32,8 @@ function PhoneDetails(){
     
  const handleSubmit= (e) => {
     e.preventDefault();
-    sendRequest().then(()=>history("/phones"));
- }
+    sendRequest().then(()=>history("/phones"))
+ };
  const handleChange=(e) =>{
     setInputs((prevState)=>({
         ...prevState,

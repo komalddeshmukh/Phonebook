@@ -12,7 +12,8 @@ router.get("/:id",phonesController.getById);
 router.put("/:id",phonesController.updatePhone);
 //update by using id
 router.delete("/:id",phonesController.deletePhone); 
-//serch by    
+//serch by  
+router.get("/:name",phonesController.searchPhone);  
 
 
 module.exports=router

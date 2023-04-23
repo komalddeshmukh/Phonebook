@@ -1,15 +1,16 @@
 import React from 'react'
 import { Button } from '@mui/material';
 import "./Phone.css";
-import {Link, useNavigate} from 'react-router-dom';
+import {Link, useNavigate, useParams} from 'react-router-dom';
 import axios from 'axios';
 
 
 function Phone(props) {
     const history= useNavigate()
+    const id=useParams().id;
     const{_id,name,number1,number2}=props.phone;
     const deleteHandler=()=>{
-      axios.delete(`http://localhost:5000/phones/${_id}`)
+      axios.delete(`http://localhost:5000/phones/${id}`)
       .then(res=>res.data)
       .then(()=>history("/phones"));
     }

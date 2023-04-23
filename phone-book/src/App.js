@@ -19,7 +19,7 @@ function App() {
         <Route path="/add" element={<AddPhone/>}exact/>
         <Route path="/phones" element={<Phones/>}exact/>
         <Route path="/about" element={<About/>}exact/>
-        <Route path="/about/:id" element={<PhoneDetails/>}exact/>
+        <Route path="/phones/:id" element={<PhoneDetails/>}exact/>
       </Routes>
     </main>
    </React.Fragment>

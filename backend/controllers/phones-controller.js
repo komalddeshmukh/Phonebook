@@ -13,7 +13,7 @@ const getAllPhones= async(req,res,next)=>{
       }
       return res.status(200).json({phones});
 };
-  const getById=async(req, res,nest)=>{
+  const getById=async(req, res,next)=>{
     const id=req.params.id;
     let phone;
     try{
@@ -78,10 +78,29 @@ const getAllPhones= async(req,res,next)=>{
     }
     return res.status(200).json({message:"Contact Deleted successfully"});
   };
+//Serch by name
+
+const searchPhone=async(req, res,next)=>{
+  var search=req.params.search;
+  let phone;
+  try{
+   phone = await Phone.find({"name":{$regex: ".*"+search+".*",
+  $options:'i'
+  }});
+
+  }catch(err){
+    console.log(err);
+  }
+  if(phone.length>0){
+    return res.status(400).json({message:"No serch Found",data:phone});
+  }
+  return res.status(200).json({message:"Search Done"});
+};
 
 
 exports.getAllPhones=getAllPhones;
 exports.addPhone=addPhone;
 exports.getById=getById;
 exports.updatePhone=updatePhone;
-exports.deletePhone=deletePhone
+exports.deletePhone=deletePhone;
+exports.searchPhone=searchPhone;
