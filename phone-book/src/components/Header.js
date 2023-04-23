@@ -21,8 +21,8 @@ const[value,setValue]=useState();
           onChange={(e, val) => setValue(val)}
           >
             <Tab LinkComponent={NavLink} to="/add" label="Add Contact"/>
-            <Tab LinkComponent={NavLink} to="/phones" label="Phones"/>
-            <Tab LinkComponent={NavLink} to="/about" label="About Us"/>
+            <Tab LinkComponent={NavLink} to="/phones" label="Contacts"/>
+            <Tab LinkComponent={NavLink} to="/search" label="Search"/>
         </Tabs>
       </toolbar>
      </AppBar>
